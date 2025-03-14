@@ -87,6 +87,20 @@
         <span>⏳ Durée : 7 heures</span>
     </div>
     <div class="container">
+        <form action="https://formspree.io/f/mwplpkdk" method="POST">
+            <h2>Évaluation et Contact</h2>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Votre évaluation :</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+        
         <div class="session" onclick="toggleDetails(this)">
             <h2>📌 Session 1 (28 février 2025 - 1h30) <span class="toggle-icon">▼</span></h2>
             <div class="details">
@@ -143,18 +157,5 @@
             </div>
         </div>
     </div>
-    <script>
-        function toggleDetails(sessionElement) {
-            let details = sessionElement.querySelector(".details");
-            let icon = sessionElement.querySelector(".toggle-icon");
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block";
-                sessionElement.classList.add("open");
-            } else {
-                details.style.display = "none";
-                sessionElement.classList.remove("open");
-            }
-        }
-    </script>
 </body>
 </html>
